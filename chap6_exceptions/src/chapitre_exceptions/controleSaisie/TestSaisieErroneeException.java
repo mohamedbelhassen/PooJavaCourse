@@ -24,7 +24,9 @@ public class TestSaisieErroneeException {
         String chaine2="";
 
         try {
+            System.out.println("Début Bloc try 1");
             controle(chaine1);
+            System.out.println("Bloc try fini sans problème");
         } catch (SaisieErroneException ex) {
             System.out.println("Chaine1 présente une erreur: "+ ex.getMessage());
         }finally{            
@@ -32,10 +34,16 @@ public class TestSaisieErroneeException {
         }  
         
         try {
+            System.out.println("Début Bloc try 2");
             controle(chaine2);
+            System.out.println("Bloc try 2 fini sans problème");
+
         } catch (SaisieErroneException ex) {
             System.out.println("Chaine2 présente une erreur: "+ ex.getMessage());
-        }finally{            
+        }catch (Exception ex) {
+            System.out.println("Chaine2 présente une erreur inconnue");
+        }
+        finally{            
             System.out.println("fin du programme p2");
         }   
 

@@ -9,12 +9,6 @@ package chapitre_exceptions.controleSaisie;
  *
  * @author moham
  */
-public class SaisieErroneException extends Exception{
-
-    public SaisieErroneException() {
-        super();
-    }
-    public SaisieErroneException(String s) {
-        super(s);
-    }
+public class ChaineCourteException extends Exception{
+    
 }
